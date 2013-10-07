@@ -1,9 +1,9 @@
 package com.pitchsider.smpp.pdu.session;
 
 /**
- * Authentication PDU used by a transmitter ESME to bind to
- * the Message Centre. The PDU contains identification
- * information and an access password for the ESME.
+ * Message Centre response to a bind_transmitter PDU. This
+ * PDU indicates the success or failure of the ESME’s attempt
+ * to bind as a transmitter.
  * 
  * @author Paul Whelan
  */

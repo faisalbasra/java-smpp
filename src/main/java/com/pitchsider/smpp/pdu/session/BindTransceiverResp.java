@@ -1,12 +1,10 @@
 package com.pitchsider.smpp.pdu.session;
 
 /**
- * Authentication PDU used by a transceiver ESME to bind to
- * the Message Centre. The PDU contains identification
- * information, an access password for the ESME and may also
- * contain routing information specifying the range of addresses
- * serviced by the ESME.
- * 
+ * Message Centre response to a bind_transceiver PDU. This
+ * PDU indicates the success or failure of the ESME’s attempt
+ * to bind as a transceiver.
+ *  
  * @author Paul Whelan
  */
 public class BindTransceiverResp {
