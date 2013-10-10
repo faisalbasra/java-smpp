@@ -1,6 +1,5 @@
 package com.pitchsider.smpp.parameter;
 
-import java.nio.ByteBuffer;
 
 /**
  * Defines the methods required by {@link Parameter}s. A parameter is the building block
@@ -12,14 +11,14 @@ public interface Parameter {
 
 	/**
 	 * write the representation of the {@link Parameter} to the byte array.
-	 * @param byteBuffer The byte buffer to write the bytes representing the parameter to.
+	 * @return The byte array representing the bytes representing the parameter.
 	 */
-	public void write(ByteBuffer byteBuffer);
+	public byte[] write();
 	
 	/**
-	 * Read the Parameter from the {@link ByteBuffer} provided.
-	 * @param byteBuffer The {@link ByteBuffer} containing the bytes that represent the parameter.
-	 * We construct the parameter from reading from this {@link ByteBuffer}.
+	 * Read the Parameter from the byte array provided.
+	 * @param parameterBytes The byte array containing the bytes that represent the parameter.
+	 * We construct the parameter from reading from this value.
 	 */
-	public void read(ByteBuffer byteBuffer);
+	public void read(byte[] parameterBytes);
 }

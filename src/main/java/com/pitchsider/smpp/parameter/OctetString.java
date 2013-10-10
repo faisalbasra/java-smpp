@@ -1,6 +1,5 @@
 package com.pitchsider.smpp.parameter;
 
-import java.nio.ByteBuffer;
 
 /**
  * An Octet String is a sequence of octets not necessarily terminated with a NULL octet. 
@@ -19,13 +18,13 @@ import java.nio.ByteBuffer;
 public class OctetString implements Parameter {
 
 	@Override
-	public void write(ByteBuffer byteBuffer) {
+	public byte[] write() {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
 
 	@Override
-	public void read(ByteBuffer byteBuffer) {
+	public void read(byte [] bytes) {
 		// TODO Auto-generated method stub
 		
 	}

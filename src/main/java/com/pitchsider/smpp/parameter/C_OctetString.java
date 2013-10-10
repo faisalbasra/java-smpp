@@ -1,6 +1,5 @@
 package com.pitchsider.smpp.parameter;
 
-import java.nio.ByteBuffer;
 
 /**
  * A C-Octet String is a sequence of ASCII characters terminated with a NULL octet (0x00).
@@ -32,13 +31,13 @@ import java.nio.ByteBuffer;
 public class C_OctetString implements Parameter {
 
 	@Override
-	public void write(ByteBuffer byteBuffer) {
+	public byte[] write() {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
 
 	@Override
-	public void read(ByteBuffer byteBuffer) {
+	public void read(byte[] bytes) {
 		// TODO Auto-generated method stub
 		
 	}
