@@ -1,5 +1,7 @@
 package com.pitchsider.smpp.parameter;
 
+import java.nio.charset.Charset;
+
 
 /**
  * An Octet String is a sequence of octets not necessarily terminated with a NULL octet. 
@@ -17,16 +19,27 @@ package com.pitchsider.smpp.parameter;
  */
 public class OctetString implements Parameter {
 
+	private String value;
+	private byte[] valueBytes;
+
+	public OctetString(String string) {
+		byte[] chars = string.getBytes(Charset.forName("ASCII"));
+		this.valueBytes = chars;
+		this.value = string;
+	}
+	
 	@Override
 	public byte[] write() {
-		// TODO Auto-generated method stub
-		return null;
+		return valueBytes;
 	}
 
 	@Override
 	public void read(byte [] bytes) {
-		// TODO Auto-generated method stub
-		
+		this.value = new String(bytes,Charset.forName("ASCII"));
+		this.valueBytes = bytes;
 	}
 
+	public String getValue() {
+		return value;
+	}
 }
